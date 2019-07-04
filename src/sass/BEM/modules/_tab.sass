@@ -1,0 +1,56 @@
+.tab-head
+    margin: 3.125rem 2rem
+    cursor: pointer
+
+    +e(title)
+        +font-body(1.2rem)
+        color: $grayish-blue
+        text-align: center
+        padding: 1.4rem 0
+        border-top: 1px solid transparentize($grayish-blue, .3)
+        position: relative
+
+        &:last-child
+            border-bottom: 1px solid transparentize($grayish-blue, .3)
+
+        &:hover
+            color: $dark-blue
+            font-weight: 500
+
+        +m(active)
+            color: $dark-blue
+            font-weight: 500
+
+            &::after
+                content: ""
+                width: 50%
+                height: 6px
+                background: $soft-red
+                position: absolute
+                bottom: -1px
+                left: 25%
+                z-index: 1
+
+.tab
+    width: 100%
+    padding: .5rem 0 5rem
+    display: none
+
+    +m(active)
+        display: block
+        
+        
+@each $number, $side in $tabs 
+    .tab-imgSection#{$number}
+        +imgSection($number, $side)
+
+.tab-text
+    margin: 2rem 2rem
+    // margin-top: -4rem
+
+    +e(title)
+        @extend %section-title
+
+    +e(body)
+        @extend %section-text
+

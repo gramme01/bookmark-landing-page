@@ -1,0 +1,36 @@
+%btn
+    +font-heading(14px)
+    padding: 14px
+    margin: 16px 4px
+    border-radius: 4px
+    border: none
+    position: relative
+    top: 0
+    display: inline-block
+    outline: none
+
+    &:hover 
+        box-shadow: 0 5px 10px -3px rgba($dark-blue, 30%)
+
+    &:active
+        position: relative
+        top: 1px
+
+
+
+.btn-primary
+    @extend %btn
+    background-color: $soft-blue
+    color: $white
+
+.btn-secondary
+    @extend %btn
+    background-color: lightness($grayish-blue)
+    color: $dark-blue
+
+.btn-tab
+    @extend .btn-primary
+    display: none
+    @media screen and (min-width: 600px)
+        display: inline-block
+

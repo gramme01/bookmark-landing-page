@@ -1,0 +1,26 @@
+=imgSection($number, $side)
+    @extend %imgSection
+    @if $side == left
+        padding: 0 0 0 16px
+    @else
+        padding: 0 16px 0 0
+       
+
+    &__img
+        @extend %img
+
+        &::before
+            @extend %before
+            #{$side}: 8px
+            background-position-x: #{$side}
+            background-image: url('../src/images/illustration-features-tab-#{$number}.svg')
+
+        &::after
+            @extend %after
+            @if $side == left
+                right: 0
+            @else
+                left: 0
+            background-color: $soft-blue
+            border-bottom-#{$side}-radius: 110px
+            border-top-#{$side}-radius: 110px

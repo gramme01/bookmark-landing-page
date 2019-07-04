@@ -1,0 +1,111 @@
+.brand
+    padding: 40px 32px
+    width: 100%
+    // position: fixed
+    display: flex
+    justify-content: space-between
+    align-items: center
+    transition: $slow
+
+    +m(scrolled)
+        background: $white
+        box-shadow: 0 3px 5px rgba(0,0,0,0.05)
+        padding: 16px 32px
+
+    +e(logo)
+        .st0 
+            fill: $dark-blue
+
+        .st1 
+            fill: $soft-blue
+        
+        .st2
+            fill: $white
+
+        +m(mobile)
+            .st0 
+                fill: $white
+
+            .st1 
+                fill: $white
+
+            .st2
+                fill: $dark-blue 
+
+    +e(toggle)
+        width: 20px
+        height: 20px
+        cursor: pointer
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+                
+    +e(bar)
+        height: 4px
+        width: 20px
+        background-color: $dark-blue
+        transition: $fast
+
+        +m(close)
+            background-color: $white
+            &:nth-of-type(1)
+                transform: translateY(8px) rotate(45deg)
+            &:nth-of-type(2)
+                opacity: 0
+            &:nth-of-type(3)
+                transform: translateY(-8px) rotate(-45deg)
+
+.navbar
+    position: fixed
+    width: 100vw
+    z-index: 999
+    transition: $slow
+
+    +m(overlay)
+        height: 100vh
+        background: transparentize($dark-blue, .1)
+    
+    +e(links)
+        display: none
+
+
+        +m(active)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            height: calc(100vh - 105px)
+            padding: 0 32px 16px
+
+.navlinks
+        text-transform: uppercase
+        list-style-type: none
+        text-align: center
+
+        +e(item)
+            width: 100% 
+            padding: 12px 0
+            border-top: 1px solid transparentize($grayish-blue, .3)
+    
+        +e(link)
+            font-size: 20px
+            letter-spacing: 4px
+            border: 2px solid transparent
+            width: 100%
+            display: block
+            padding: 4px 0
+            color: $white
+            line-height: 2
+            transition: $slow
+
+            +m(active)
+                border: 2px solid $white
+                border-radius: 8px
+
+.social-links
+    display: flex
+    justify-content: center
+    align-items: center
+
+    +e(item)
+        margin: 16px 16px
