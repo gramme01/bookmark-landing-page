@@ -1,20 +1,20 @@
 //cacheDOM
-let toggleBtn = document.querySelector(".brand__toggle");
-let logo = document.querySelector(".brand__logo");
-let topBar = document.querySelector(".brand");
-let overlay = document.querySelector(".navbar");
-let showLinks = document.querySelector(".navbar__links");
-let navLinks = document.querySelectorAll(".navlinks__link");
-let tabtitle = document.querySelectorAll(".tab-head__title");
-let tabcontent = document.querySelectorAll(".tab");
-let acdnHead = document.querySelectorAll(".accordion__head");
+const toggleBtn = document.querySelector(".brand__toggle");
+const logo = document.querySelector(".brand__logo");
+const topBar = document.querySelector(".brand");
+const overlay = document.querySelector(".navbar");
+const showLinks = document.querySelector(".navbar__links");
+const navLinks = document.querySelectorAll(".navlinks__link");
+const tabtitle = document.querySelectorAll(".tab-head__title");
+const tabcontent = document.querySelectorAll(".tab");
+const acdnHead = document.querySelectorAll(".accordion__head");
 
-// console.log(acdnHead);
+// console.log(allNavItem);
 
 //************
 //Define Event Functions
 //************
-let scrollFunction = () => {
+const scrolledNavbar = () => {
 	(document.body.scrollTop > 105 ||
 		document.documentElement.scrollTop > 105) &&
 	!overlay.classList.contains("navbar--overlay")
@@ -22,19 +22,15 @@ let scrollFunction = () => {
 		: topBar.classList.remove("brand--scrolled");
 };
 
-let mobileToggle = () => {
-	//hamburgerToggle
+const mobileToggle = () => {
 	for (let i = 0; i < 3; i++) {
+		//hamburgerToggle
 		toggleBtn.children[i].classList.toggle("brand__bar--close");
 	}
-	//logoToggle
 	logo.classList.toggle("brand__logo--mobile");
-	//overlayToggle
 	overlay.classList.toggle("navbar--overlay");
-	//linksToggle
 	showLinks.classList.toggle("navbar__links--active");
-	// check scroll
-	scrollFunction();
+	scrolledNavbar();
 };
 
 let activeLinkToggle = e => {
@@ -43,8 +39,10 @@ let activeLinkToggle = e => {
 	);
 	navLinksActive[0].classList.remove("navlinks__link--active");
 	e.target.classList.add("navlinks__link--active");
+	setTimeout(mobileToggle, 400);
 };
 
+//Features Section
 let tabMenuToggle = e => {
 	let tabtitleActive = document.getElementsByClassName(
 		"tab-head__title--active"
@@ -63,6 +61,7 @@ let tabMenuToggle = e => {
 	}
 };
 
+//Accordion
 let acdnToggle = e => {
 	let panel = e.target.nextElementSibling;
 	let acdnHeadActive = document.querySelector(".accordion__head--active");
@@ -89,7 +88,7 @@ let acdnToggle = e => {
 //Add Event Listeners
 //************
 window.onscroll = function() {
-	scrollFunction();
+	scrolledNavbar();
 };
 
 toggleBtn.addEventListener("click", mobileToggle);

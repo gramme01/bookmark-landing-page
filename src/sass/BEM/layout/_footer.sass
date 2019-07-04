@@ -1,0 +1,48 @@
+.footer
+    padding: 2.5rem 2rem .5rem
+    background: $dark-blue
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.footer-logo
+    margin-bottom: 2rem
+    .st0 
+        fill: $white
+
+    .st1 
+        fill: $soft-blue
+    
+    .st2
+        fill: $white
+
+.footer-links
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    +e(item)
+        margin-bottom: 1.8rem
+        text-transform: uppercase
+        color: $grayish-blue
+        letter-spacing: .1ch
+
+        &:hover
+            color: $white
+
+.footer-icons
+    margin-bottom: 1.5rem
+
+    +e(item)
+        margin:0 1rem
+
+.footer-attribution
+    font-size: 12px
+    +e(link)
+        color: $grayish-blue
+        text-decoration: underline $grayish-blue
+
+        &:hover
+            color: $white
