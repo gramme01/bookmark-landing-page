@@ -36,10 +36,12 @@ const scrollAnimation = e => {
 	if (
 		e.target.href &&
 		e.target.href.indexOf("#") != -1 &&
+		e.target.href.indexOf("#null") == -1 &&
 		(e.target.pathname == location.pathname ||
 			"/" + e.target.pathname == location.pathname) &&
 		e.target.search == location.search
 	) {
+		console.log(e.target.href.indexOf("#1"));
 		scrollAnchors(e, e.target);
 	}
 };

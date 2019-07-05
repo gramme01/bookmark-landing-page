@@ -347,6 +347,7 @@ a {
 
 .card {
   width: 90%;
+  max-width: 18rem;
   box-shadow: 0 0 1rem rgba(37, 43, 70, 0.15);
   border-radius: 10px;
   margin: 1.5rem 0;
@@ -407,13 +408,13 @@ a {
   content: url("../src/images/icon-up.svg");
 }
 .accordion__panel {
-  border-bottom: 1px solid rgba(145, 148, 161, 0.5);
   max-height: 0;
   overflow: hidden;
+  border-bottom: 1px solid rgba(145, 148, 161, 0.5);
   transition: max-height 300ms linear;
 }
 .accordion__panel--active {
-  padding: 20px 0;
+  padding: 0px 0 20px;
 }
 
 .btn-faq {

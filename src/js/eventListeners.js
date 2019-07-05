@@ -9,8 +9,6 @@ const tabtitle = document.querySelectorAll(".tab-head__title");
 const tabcontent = document.querySelectorAll(".tab");
 const acdnHead = document.querySelectorAll(".accordion__head");
 
-// console.log(allNavItem);
-
 //************
 //Define Event Functions
 //************
@@ -66,7 +64,6 @@ let acdnToggle = e => {
 	let panel = e.target.nextElementSibling;
 	let acdnHeadActive = document.querySelector(".accordion__head--active");
 	let panelActive = document.querySelector(".accordion__panel--active");
-	console.log(acdnHeadActive, panelActive);
 	if (acdnHeadActive !== null && acdnHeadActive !== e.target) {
 		acdnHeadActive.classList.remove("accordion__head--active");
 		panelActive.classList.remove("accordion__panel--active");
@@ -80,7 +77,7 @@ let acdnToggle = e => {
 		panel.style.maxHeight = null;
 	} else {
 		panel.classList.add("accordion__panel--active");
-		panel.style.maxHeight = panel.scrollHeight + "px";
+		panel.style.maxHeight = panel.scrollHeight + 20 + "px";
 	}
 };
 
