@@ -8,4 +8,5 @@ Made use of Vanilla JS, Sass, BEM and gulp
 
 #### Todo
 *   Fix max-width for ultra large screens
+*   Implement scrollspy
 *   Utilize babelify for compatibility with es2015 js engines. 
