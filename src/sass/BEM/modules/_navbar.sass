@@ -146,7 +146,8 @@
 
         +e(link)
             padding: 0 1rem
-            font-size: 12px
+            font-size: 14px
+            letter-spacing: .2ch
             color: $dark-blue
             border-width: 1px
             line-height: 2.5
@@ -166,6 +167,12 @@
     .navbar
         padding: 2rem 5%
 
+        +m(scrolled)
+            padding: 1rem 5%
+
 +respond-to(ultra-large)
     .navbar
         padding: 2rem 10%
+
+        +m(scrolled)
+            padding: 1rem 10%

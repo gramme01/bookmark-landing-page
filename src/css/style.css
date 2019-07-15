@@ -316,7 +316,8 @@ a {
   }
   .navlinks__link {
     padding: 0 1rem;
-    font-size: 12px;
+    font-size: 14px;
+    letter-spacing: 0.2ch;
     color: #252b46;
     border-width: 1px;
     line-height: 2.5;
@@ -337,10 +338,16 @@ a {
   .navbar {
     padding: 2rem 5%;
   }
+  .navbar--scrolled {
+    padding: 1rem 5%;
+  }
 }
 @media screen and (min-width: 1500px) {
   .navbar {
     padding: 2rem 10%;
+  }
+  .navbar--scrolled {
+    padding: 1rem 10%;
   }
 }
 .download {
