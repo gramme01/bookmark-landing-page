@@ -10,7 +10,7 @@ const scrollAnchors = (e, respond = null) => {
 	if (!targetAnchor) return;
 
 	const originalTop = distanceToTop(targetAnchor);
-	window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
+	window.scrollBy({ top: originalTop - 100, left: 0, behavior: "smooth" });
 
 	const checkIfDone = setInterval(() => {
 		const atBottom =
@@ -18,7 +18,6 @@ const scrollAnchors = (e, respond = null) => {
 			document.body.offsetHeight - 2;
 		if (distanceToTop(targetAnchor) === 0 || atBottom) {
 			targetAnchor.tabIndex = "-1";
-			targetAnchor.focus();
 
 			if ("history" in window) {
 				window.history.pushState("", "", targetID);

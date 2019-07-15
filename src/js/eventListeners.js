@@ -38,6 +38,9 @@ const mobileToggle = () => {
 };
 
 const closeOverlay = () => {
+	for (let i = 0; i < 3; i++) {
+		toggleBtn.children[i].classList.remove("brand__bar--close");
+	}
 	logo.classList.remove("brand__logo--mobile");
 	navbar.classList.remove("navbar--overlay");
 	showLinks.classList.remove("navbar__links--active");
