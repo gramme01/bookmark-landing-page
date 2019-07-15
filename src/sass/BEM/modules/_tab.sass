@@ -1,6 +1,5 @@
 .tab-head
     margin: 3.125rem 2rem
-    cursor: pointer
 
     +e(title)
         +font-body(1.2rem)
@@ -9,12 +8,13 @@
         padding: 1.4rem 0
         border-top: 1px solid transparentize($grayish-blue, .3)
         position: relative
+        cursor: pointer
 
         &:last-child
             border-bottom: 1px solid transparentize($grayish-blue, .3)
 
         &:hover
-            color: $dark-blue
+            color: $soft-red
 
         +m(active)
             color: $dark-blue
@@ -38,7 +38,6 @@
     +m(active)
         display: block
         
-        
 @each $number, $side in $tabs 
     .tab-imgSection#{$number}
         +imgSection($number, $side)
@@ -49,7 +48,63 @@
 
     +e(title)
         @extend %section-title
+        
 
     +e(body)
         @extend %section-text
 
+
+
+
+//media queries
++respond-to(tablet)
+    .tab-head
+        width: 90%
+        max-width: 750px
+        margin: 3.125rem auto
+        display: flex
+        justify-content: space-around
+        border-bottom: 1px solid transparentize($grayish-blue, .3)
+
+        +e(title)
+            border: none
+            width: 32%
+
+            &:last-child
+                border-bottom: none
+
+            +m(active)
+                &::after
+                    width: 100%
+                    left: 0
+                  
+
+    .tab
+        +m(active)
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+    .tab-text
+        width: 60%
+        margin: 0 2rem
+        display: flex
+        flex-direction: column
+        align-items: start
+        justify-content: flex-start
+
+        +e(title)
+            text-align: left
+        
+        +e(body)
+            text-align: justify
+            // text-justify: inter-word
+
+
++respond-to(desktop-large)
+    .tab-text
+        margin-right: 5vw
+
++respond-to(desktop-large)
+    .tab-text
+        margin-right: 10vw

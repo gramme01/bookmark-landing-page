@@ -3,16 +3,13 @@
     padding: 105px 0 20px
 
     &-imgSection
-        justify-content: center
-        align-items: center
-        padding: 0 0 0 16px   
+        padding: 0 0 0 16px
 
         +e(img)
             display: block
             position: relative
             width: 100%
             height: 380px
-
 
             &::before
                 content: ''
@@ -39,7 +36,7 @@
 
     &-textSection
         text-align: center
-        margin-top: -60px
+        margin: calc(25vw - 154px) 0 2rem
         padding: 0px 32px
 
         +e(title)
@@ -48,3 +45,89 @@
 
         +e(info)
             margin-bottom: 1rem
+
+
+//media queries
++respond-to-width(477px)
+    .header
+        &-textSection
+            margin-top: calc(50vw - 222.5px)
+
++respond-to-width(606px)
+    .header
+        &-imgSection
+            +e(img)
+                width: 590px
+                left: calc(100vw - 590px)
+
+                &::before
+                    height: 100% 
+
+                &::after
+                    height: 300px
+                    width: 80%
+                    top: 100px
+
+        &-textSection
+            margin-top: 5rem
+
++respond-to(desktop)
+    .header
+        display: flex
+        align-items: center
+
+
+        &-imgSection
+            order: 2
+            width: 50%
+            +e(img)
+                left: calc(50vw - 590px)
+
+        &-textSection
+            width: 50%
+            margin-right: calc(450px - 41vw)
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+            text-align: left
+            +respond-to-width(1098px)
+                margin-right: 0
+
++respond-to(desktop-large)
+    .header
+        &-textSection
+            padding: 2rem 0 2rem 5%
+
++respond-to(desktop-large)
+    .header
+        &-imgSection
+            +e(img)
+                display: block
+                position: relative
+                width: 100%
+                height: 400px
+
+                &::before
+                    width: calc(100% - 16px)
+                    right: 10%
+
+                &::after
+                    width: 90%
+                    top: 120px
+
+        &-textSection
+            padding: 2rem 0 2rem 5%
+
++respond-to(ultra-large)
+    .header
+        &-imgSection
+            +e(img)
+                &::before
+                    right: 20%
+
+                &::after
+                    width: 90%
+                    top: 120px
+        &-textSection
+            padding-left: 10%

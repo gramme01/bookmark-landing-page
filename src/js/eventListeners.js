@@ -2,7 +2,7 @@
 const toggleBtn = document.querySelector(".brand__toggle");
 const logo = document.querySelector(".brand__logo");
 const topBar = document.querySelector(".brand");
-const overlay = document.querySelector(".navbar");
+const navbar = document.querySelector(".navbar");
 const showLinks = document.querySelector(".navbar__links");
 const navLinks = document.querySelectorAll(".navlinks__link");
 const tabtitle = document.querySelectorAll(".tab-head__title");
@@ -13,11 +13,17 @@ const acdnHead = document.querySelectorAll(".accordion__head");
 //Define Event Functions
 //************
 const scrolledNavbar = () => {
-	(document.body.scrollTop > 105 ||
-		document.documentElement.scrollTop > 105) &&
-	!overlay.classList.contains("navbar--overlay")
-		? topBar.classList.add("brand--scrolled")
-		: topBar.classList.remove("brand--scrolled");
+	if (
+		(document.body.scrollTop > 105 ||
+			document.documentElement.scrollTop > 105) &&
+		!navbar.classList.contains("navbar--overlay")
+	) {
+		navbar.classList.add("navbar--scrolled");
+		topBar.classList.add("brand--scrolled");
+	} else {
+		navbar.classList.remove("navbar--scrolled");
+		topBar.classList.remove("brand--scrolled");
+	}
 };
 
 const mobileToggle = () => {
@@ -26,8 +32,15 @@ const mobileToggle = () => {
 		toggleBtn.children[i].classList.toggle("brand__bar--close");
 	}
 	logo.classList.toggle("brand__logo--mobile");
-	overlay.classList.toggle("navbar--overlay");
+	navbar.classList.toggle("navbar--overlay");
 	showLinks.classList.toggle("navbar__links--active");
+	scrolledNavbar();
+};
+
+const closeOverlay = () => {
+	logo.classList.remove("brand__logo--mobile");
+	navbar.classList.remove("navbar--overlay");
+	showLinks.classList.remove("navbar__links--active");
 	scrolledNavbar();
 };
 
@@ -37,7 +50,7 @@ let activeLinkToggle = e => {
 	);
 	navLinksActive[0].classList.remove("navlinks__link--active");
 	e.target.classList.add("navlinks__link--active");
-	setTimeout(mobileToggle, 400);
+	setTimeout(closeOverlay, 400);
 };
 
 //Features Section

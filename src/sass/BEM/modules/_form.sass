@@ -1,25 +1,29 @@
 .contact
     margin: 3.125rem 0 0
-    padding: 4rem 2rem 3.5rem
+    padding: 4rem 0 3.5rem
     background: $soft-blue
-    text-align: center
+
 
     +e(info)
         +font-body(12px)
         color: $white
         letter-spacing: 0.5ch
         text-transform: uppercase
+        text-align: center
         
     +e(head)
         @extend %section-title
         color: $white
         margin-bottom: 1.5rem
 
+.contact-wrapper
+    margin-top: 0
+
 .form
     display: flex
-    justify-content: center
+    justify-content: space-around
     flex-wrap: wrap
-    position: relative
+    
 
     +e(input) 
         @extend %form-input 
@@ -57,6 +61,10 @@
         color: $white
         background-color: $soft-red
         margin-bottom: 0.75rem
+        &:hover
+            color: $soft-red
+            background-color: $white
+
 
         
 
@@ -84,3 +92,16 @@
     display: flex
     flex-direction: column
     margin-bottom: 0.75rem
+    position: relative
+
+
+//media queries 
++respond-to(desktop)
+    .contact
+        padding: 2rem 0
+    .input
+        width: 70%
+
+    .form
+        +e(btn)
+            width: 20%

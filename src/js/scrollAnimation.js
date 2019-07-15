@@ -41,7 +41,6 @@ const scrollAnimation = e => {
 			"/" + e.target.pathname == location.pathname) &&
 		e.target.search == location.search
 	) {
-		console.log(e.target.href.indexOf("#1"));
 		scrollAnchors(e, e.target);
 	}
 };

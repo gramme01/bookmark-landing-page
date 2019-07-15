@@ -81,9 +81,10 @@
         browser tab
         and see your sites
         load instantly. Try it for free.</p>
-
-      <a href="#null" class="btn-primary">Get it on Chrome</a>
-      <a href="#null" class="btn-secondary">Get it on Firefox</a>
+      <div class="header__button">
+        <a href="#null" class="btn-primary">Get it on Chrome</a>
+        <a href="#null" class="btn-secondary">Get it on Firefox</a>
+      </div>
     </div>
   </header>
 
@@ -108,8 +109,8 @@
       <h2 class="tab-text__title">Bookmark in one click</h2>
       <p class="tab-text__body">Organize your bookmarks however you like. Our simple drag-and-drop interface
         gives you complete control over how you manage your favourite sites.</p>
+      <a href="#null" class="btn-tab">More Info</a>
     </div>
-    <a href="#null" class="btn-tab">More Info</a>
   </div> <!-- END OF TAB -->
 
   <div id="tab-2" class="tab">
@@ -120,8 +121,8 @@
       <h2 class="tab-text__title">Intelligent search</h2>
       <p class="tab-text__body">Our powerful search feature will help you find saved sites in no time at all.
         No need to trawl through all of your bookmarks.</p>
+      <a href="#null" class="btn-tab">More Info</a>
     </div>
-    <a href="#null" class="btn-tab">More Info</a>
   </div> <!-- END OF TAB -->
 
   <div id="tab-3" class="tab">
@@ -132,8 +133,8 @@
       <h2 class="tab-text__title">Share your bookmarks</h2>
       <p class="tab-text__body">Easily share your bookmarks and collections with others. Create a shareable
         link that you can send at the click of a button.</p>
+      <a href="#null" class="btn-tab">More Info</a>
     </div>
-    <a href="#null" class="btn-tab">More Info</a>
   </div> <!-- END OF TAB -->
 
   <section id="Pricing" class="download">
@@ -141,42 +142,42 @@
 
     <p class="download__text"> We’ve got more browsers in the pipeline. Please do let us know if you’ve
       got a favourite you’d like us to prioritize.</p>
-
-    <div class="card-container">
-      <div class="card">
-        <div class="card-body">
-          <img class="card-body__image" src="src/images/logo-chrome.svg" alt="Google Chrome">
-          <h3 class="card-body__header">Add to Chrome</h3>
-          <p class="card-body__text">Minimum version 62</p>
-        </div>
-        <div class="card-link">
-          <a href="#null" class="card-link__btn">Add & Install Extension</a>
-        </div>
-      </div> <!-- END OF CARD -->
-
-      <div class="card">
-        <div class="card-body">
-          <img class="card-body__image" src="src/images/logo-firefox.svg" alt="Google Chrome">
-          <h3 class="card-body__header">Add to Firefox</h3>
-          <p class="card-body__text">Minimum version 55</p>
-        </div>
-        <div class="card-link">
-          <a href="#null" class="card-link__btn">Add & Install Extension</a>
-        </div>
-      </div> <!-- END OF CARD -->
-
-      <div class="card">
-        <div class="card-body">
-          <img class="card-body__image" src="src/images/logo-opera.svg" alt="Google Chrome">
-          <h3 class="card-body__header">Add to Opera</h3>
-          <p class="card-body__text">Minimum version 46</p>
-        </div>
-        <div class="card-link">
-          <a href="#null" class="card-link__btn">Add & Install Extension</a>
-        </div>
-      </div> <!-- END OF CARD -->
-    </div> <!-- END OF CARD CONTAINER -->
   </section>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-body">
+        <img class="card-body__image" src="src/images/logo-chrome.svg" alt="Google Chrome">
+        <h3 class="card-body__header">Add to Chrome</h3>
+        <p class="card-body__text">Minimum version 62</p>
+      </div>
+      <div class="card-link">
+        <a href="#null" class="card-link__btn">Add & Install Extension</a>
+      </div>
+    </div> <!-- END OF CARD -->
+
+    <div class="card">
+      <div class="card-body">
+        <img class="card-body__image" src="src/images/logo-firefox.svg" alt="Google Chrome">
+        <h3 class="card-body__header">Add to Firefox</h3>
+        <p class="card-body__text">Minimum version 55</p>
+      </div>
+      <div class="card-link">
+        <a href="#null" class="card-link__btn">Add & Install Extension</a>
+      </div>
+    </div> <!-- END OF CARD -->
+
+    <div class="card">
+      <div class="card-body">
+        <img class="card-body__image" src="src/images/logo-opera.svg" alt="Google Chrome">
+        <h3 class="card-body__header">Add to Opera</h3>
+        <p class="card-body__text">Minimum version 46</p>
+      </div>
+      <div class="card-link">
+        <a href="#null" class="card-link__btn">Add & Install Extension</a>
+      </div>
+    </div> <!-- END OF CARD -->
+  </div> <!-- END OF CARD CONTAINER -->
+
 
   <section class="faq">
     <h2 class="faq__title">Frequently Asked Questions</h2>
@@ -211,61 +212,73 @@
   </section>
 
   <section id="Contact" class="contact">
-    <p class="contact__info">35,000+ already joined</p>
-    <h2 class="contact__head">Stay up-to-date with what we’re doing</h2>
-    <form class="form" method="POST" novalidate>
-      <div class="input">
-        <input class="form__input" type="email" name="email" id="email" placeholder="Enter your email address" required>
-        <i class="form__warning"></i>
-        <div class="form__error">Whoops, Enter a valid email</div>
-      </div>
-      <input class="form__btn" type="submit" value="Contact Us">
-    </form>
+    <div class="contact-wrapper">
+      <p class="contact__info">35,000+ already joined</p>
+      <h2 class="contact__head">Stay up-to-date with what we’re doing</h2>
+      <form class="form" method="POST" novalidate>
+        <div class="input">
+          <input class="form__input" type="email" name="email" id="email" placeholder="Enter your email address"
+            required>
+          <i class="form__warning"></i>
+          <div class="form__error">Whoops, Enter a valid email</div>
+        </div>
+        <input class="form__btn" type="submit" value="Contact Us">
+      </form>
+    </div>
   </section>
 
   <footer class="footer">
-    <svg class="footer-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-      xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="147.7px" height="25px"
-      viewBox="0 0 147.7 25" style="enable-background:new 0 0 147.7 25;" xml:space="preserve">
-      <defs>
-      </defs>
-      <g>
-        <path class="st0" d="M37,6.3h5.2c0.7,0,1.4,0.2,2.1,0.5c0.6,0.3,1.1,0.7,1.5,1.3s0.5,1.1,0.5,1.8c0,0.7-0.2,1.3-0.5,1.7
-c-0.3,0.5-0.8,0.9-1.3,1.1v0.1c0.7,0.2,1.3,0.6,1.7,1.2c0.4,0.5,0.6,1.2,0.6,1.9c0,0.7-0.2,1.4-0.6,2c-0.4,0.6-0.9,1-1.6,1.3
-c-0.7,0.3-1.4,0.5-2.2,0.5H37V6.3z M42,11.7c0.5,0,1-0.2,1.3-0.5c0.3-0.3,0.5-0.7,0.5-1.1c0-0.4-0.2-0.8-0.5-1.1
-c-0.3-0.3-0.7-0.5-1.3-0.5h-2.6v3.2C39.5,11.7,42,11.7,42,11.7z M42.3,17.4c0.6,0,1.1-0.2,1.4-0.5c0.3-0.3,0.5-0.7,0.5-1.2
-c0-0.5-0.2-0.9-0.5-1.3c-0.3-0.3-0.8-0.5-1.5-0.5h-2.7v3.5H42.3z M55.2,20c-1.3,0-2.5-0.3-3.6-0.9c-1-0.6-1.9-1.5-2.5-2.5
-c-0.6-1.1-0.9-2.2-0.9-3.5c0-1.3,0.3-2.5,0.9-3.5c0.6-1.1,1.5-1.9,2.5-2.5C52.8,6.3,53.9,6,55.2,6c1.3,0,2.5,0.3,3.6,0.9
-c1,0.6,1.9,1.5,2.5,2.5c0.6,1.1,0.9,2.2,0.9,3.5c0,1.3-0.3,2.5-0.9,3.5c-0.6,1.1-1.5,1.9-2.5,2.5C57.7,19.7,56.6,20,55.2,20
-L55.2,20z M55.2,17.6c0.8,0,1.6-0.2,2.3-0.6c0.7-0.4,1.2-0.9,1.6-1.6c0.4-0.7,0.6-1.5,0.6-2.4s-0.2-1.7-0.6-2.4
-c-0.4-0.7-0.9-1.2-1.6-1.6c-0.7-0.4-1.5-0.6-2.3-0.6c-0.8,0-1.6,0.2-2.3,0.6c-0.7,0.4-1.2,0.9-1.6,1.6c-0.4,0.7-0.6,1.5-0.6,2.4
-c0,0.9,0.2,1.7,0.6,2.4c0.4,0.7,0.9,1.2,1.6,1.6C53.7,17.4,54.5,17.6,55.2,17.6z M70.6,20c-1.3,0-2.5-0.3-3.6-0.9
-c-1-0.6-1.9-1.5-2.5-2.5c-0.6-1.1-0.9-2.2-0.9-3.5c0-1.3,0.3-2.5,0.9-3.5C65.1,8.4,66,7.5,67,6.9C68.1,6.3,69.3,6,70.6,6
-c1.3,0,2.5,0.3,3.6,0.9c1,0.6,1.9,1.5,2.5,2.5c0.6,1.1,0.9,2.2,0.9,3.5c0,1.3-0.3,2.5-0.9,3.5c-0.6,1.1-1.5,1.9-2.5,2.5
-C73.1,19.7,71.9,20,70.6,20z M70.6,17.6c0.8,0,1.6-0.2,2.3-0.6c0.7-0.4,1.2-0.9,1.6-1.6c0.4-0.7,0.6-1.5,0.6-2.4s-0.2-1.7-0.6-2.4
-c-0.4-0.7-0.9-1.2-1.6-1.6c-0.7-0.4-1.5-0.6-2.3-0.6c-0.8,0-1.6,0.2-2.3,0.6c-0.7,0.4-1.2,0.9-1.6,1.6c-0.4,0.7-0.6,1.5-0.6,2.4
-c0,0.9,0.2,1.7,0.6,2.4c0.4,0.7,0.9,1.2,1.6,1.6C69,17.4,69.8,17.6,70.6,17.6z M79.8,6.3h2.5V12h0.2l4.9-5.7h3v0.1L85.6,12l5.3,7.5
-v0.1h-3.1l-4-5.7l-1.5,1.8v3.9h-2.5L79.8,6.3L79.8,6.3z M93.8,6H97l3.5,9.4h0.2l3.5-9.4h3.3v13.4H105v-6.6l0.2-2.2H105l-3.4,8.8h-2
-l-3.4-8.8h-0.1l0.2,2.2v6.6h-2.5L93.8,6L93.8,6z M114.6,6h2.9l5,13.4h-2.8l-1.1-3.2h-5.1l-1.1,3.2h-2.8C109.6,19.4,114.6,6,114.6,6
-z M117.8,13.9l-1.2-3.4l-0.5-1.6H116l-0.5,1.6l-1.2,3.4H117.8L117.8,13.9z M124.6,6h4.9c0.9,0,1.6,0.2,2.3,0.5
-c0.7,0.4,1.2,0.9,1.6,1.5c0.4,0.6,0.6,1.4,0.6,2.2c0,0.9-0.3,1.6-0.8,2.3c-0.5,0.7-1.2,1.2-2,1.4l0,0.1l3.6,5.1v0.1h-2.9l-3.5-5
-h-1.2v5h-2.5C124.6,19.4,124.6,6,124.6,6z M129.4,12c0.6,0,1-0.2,1.4-0.5c0.4-0.3,0.5-0.8,0.5-1.3c0-0.5-0.2-0.9-0.5-1.3
-c-0.3-0.4-0.8-0.5-1.4-0.5h-2.4V12L129.4,12L129.4,12z M136.6,6h2.5v5.7h0.1l4.9-5.7h3v0.2l-4.8,5.5l5.3,7.5v0.1h-3.1l-4-5.7
-l-1.5,1.8v3.9h-2.5L136.6,6L136.6,6z" />
+    <div class="footer-content">
+      <svg class="footer-logo" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px"
+        y="0px" width="147.7px" height="25px" viewBox="0 0 147.7 25" style="enable-background:new 0 0 147.7 25;"
+        xml:space="preserve">
+        <defs>
+        </defs>
         <g>
-          <circle class="st1" cx="12.5" cy="12.5" r="12.5" />
-          <path class="st2" d="M9,9v10l3.5-3.4l3.5,3.4V9c0-1.1-0.9-2-2-2H11C9.9,7,9,7.9,9,9z" />
+          <path class="st0" d="M37,6.3h5.2c0.7,0,1.4,0.2,2.1,0.5c0.6,0.3,1.1,0.7,1.5,1.3s0.5,1.1,0.5,1.8c0,0.7-0.2,1.3-0.5,1.7
+  c-0.3,0.5-0.8,0.9-1.3,1.1v0.1c0.7,0.2,1.3,0.6,1.7,1.2c0.4,0.5,0.6,1.2,0.6,1.9c0,0.7-0.2,1.4-0.6,2c-0.4,0.6-0.9,1-1.6,1.3
+  c-0.7,0.3-1.4,0.5-2.2,0.5H37V6.3z M42,11.7c0.5,0,1-0.2,1.3-0.5c0.3-0.3,0.5-0.7,0.5-1.1c0-0.4-0.2-0.8-0.5-1.1
+  c-0.3-0.3-0.7-0.5-1.3-0.5h-2.6v3.2C39.5,11.7,42,11.7,42,11.7z M42.3,17.4c0.6,0,1.1-0.2,1.4-0.5c0.3-0.3,0.5-0.7,0.5-1.2
+  c0-0.5-0.2-0.9-0.5-1.3c-0.3-0.3-0.8-0.5-1.5-0.5h-2.7v3.5H42.3z M55.2,20c-1.3,0-2.5-0.3-3.6-0.9c-1-0.6-1.9-1.5-2.5-2.5
+  c-0.6-1.1-0.9-2.2-0.9-3.5c0-1.3,0.3-2.5,0.9-3.5c0.6-1.1,1.5-1.9,2.5-2.5C52.8,6.3,53.9,6,55.2,6c1.3,0,2.5,0.3,3.6,0.9
+  c1,0.6,1.9,1.5,2.5,2.5c0.6,1.1,0.9,2.2,0.9,3.5c0,1.3-0.3,2.5-0.9,3.5c-0.6,1.1-1.5,1.9-2.5,2.5C57.7,19.7,56.6,20,55.2,20
+  L55.2,20z M55.2,17.6c0.8,0,1.6-0.2,2.3-0.6c0.7-0.4,1.2-0.9,1.6-1.6c0.4-0.7,0.6-1.5,0.6-2.4s-0.2-1.7-0.6-2.4
+  c-0.4-0.7-0.9-1.2-1.6-1.6c-0.7-0.4-1.5-0.6-2.3-0.6c-0.8,0-1.6,0.2-2.3,0.6c-0.7,0.4-1.2,0.9-1.6,1.6c-0.4,0.7-0.6,1.5-0.6,2.4
+  c0,0.9,0.2,1.7,0.6,2.4c0.4,0.7,0.9,1.2,1.6,1.6C53.7,17.4,54.5,17.6,55.2,17.6z M70.6,20c-1.3,0-2.5-0.3-3.6-0.9
+  c-1-0.6-1.9-1.5-2.5-2.5c-0.6-1.1-0.9-2.2-0.9-3.5c0-1.3,0.3-2.5,0.9-3.5C65.1,8.4,66,7.5,67,6.9C68.1,6.3,69.3,6,70.6,6
+  c1.3,0,2.5,0.3,3.6,0.9c1,0.6,1.9,1.5,2.5,2.5c0.6,1.1,0.9,2.2,0.9,3.5c0,1.3-0.3,2.5-0.9,3.5c-0.6,1.1-1.5,1.9-2.5,2.5
+  C73.1,19.7,71.9,20,70.6,20z M70.6,17.6c0.8,0,1.6-0.2,2.3-0.6c0.7-0.4,1.2-0.9,1.6-1.6c0.4-0.7,0.6-1.5,0.6-2.4s-0.2-1.7-0.6-2.4
+  c-0.4-0.7-0.9-1.2-1.6-1.6c-0.7-0.4-1.5-0.6-2.3-0.6c-0.8,0-1.6,0.2-2.3,0.6c-0.7,0.4-1.2,0.9-1.6,1.6c-0.4,0.7-0.6,1.5-0.6,2.4
+  c0,0.9,0.2,1.7,0.6,2.4c0.4,0.7,0.9,1.2,1.6,1.6C69,17.4,69.8,17.6,70.6,17.6z M79.8,6.3h2.5V12h0.2l4.9-5.7h3v0.1L85.6,12l5.3,7.5
+  v0.1h-3.1l-4-5.7l-1.5,1.8v3.9h-2.5L79.8,6.3L79.8,6.3z M93.8,6H97l3.5,9.4h0.2l3.5-9.4h3.3v13.4H105v-6.6l0.2-2.2H105l-3.4,8.8h-2
+  l-3.4-8.8h-0.1l0.2,2.2v6.6h-2.5L93.8,6L93.8,6z M114.6,6h2.9l5,13.4h-2.8l-1.1-3.2h-5.1l-1.1,3.2h-2.8C109.6,19.4,114.6,6,114.6,6
+  z M117.8,13.9l-1.2-3.4l-0.5-1.6H116l-0.5,1.6l-1.2,3.4H117.8L117.8,13.9z M124.6,6h4.9c0.9,0,1.6,0.2,2.3,0.5
+  c0.7,0.4,1.2,0.9,1.6,1.5c0.4,0.6,0.6,1.4,0.6,2.2c0,0.9-0.3,1.6-0.8,2.3c-0.5,0.7-1.2,1.2-2,1.4l0,0.1l3.6,5.1v0.1h-2.9l-3.5-5
+  h-1.2v5h-2.5C124.6,19.4,124.6,6,124.6,6z M129.4,12c0.6,0,1-0.2,1.4-0.5c0.4-0.3,0.5-0.8,0.5-1.3c0-0.5-0.2-0.9-0.5-1.3
+  c-0.3-0.4-0.8-0.5-1.4-0.5h-2.4V12L129.4,12L129.4,12z M136.6,6h2.5v5.7h0.1l4.9-5.7h3v0.2l-4.8,5.5l5.3,7.5v0.1h-3.1l-4-5.7
+  l-1.5,1.8v3.9h-2.5L136.6,6L136.6,6z" />
+          <g>
+            <circle class="st1" cx="12.5" cy="12.5" r="12.5" />
+            <path class="st2" d="M9,9v10l3.5-3.4l3.5,3.4V9c0-1.1-0.9-2-2-2H11C9.9,7,9,7.9,9,9z" />
+          </g>
         </g>
-      </g>
-    </svg>
-    <div class="footer-links">
-      <a href="#Feature" class="footer-links__item">Features</a>
-      <a href="#Pricing" class="footer-links__item">Pricing</a>
-      <a href="#Contact" class="footer-links__item">Contact</a>
-    </div>
-    <div class="footer-icons">
-      <a class="footer-icons__item" href="#null"><img src="src/images/icon-facebook.svg" alt="Check Facebook"></a>
-      <a class="footer-icons__item" href="#null"><img src="src/images/icon-twitter.svg" alt="Check Twitter"></a>
+      </svg>
+      <div class="footer-links">
+        <a href="#Feature" class="footer-links__item">Features</a>
+        <a href="#Pricing" class="footer-links__item">Pricing</a>
+        <a href="#Contact" class="footer-links__item">Contact</a>
+      </div>
+      <div class="footer-icons">
+        <a class="footer-icons__item" href="#null"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path class="footer-icons__icon" fill-rule="evenodd"
+              d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+          </svg></a>
+        <a class="footer-icons__item" href="#null"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+            <path class="footer-icons__icon" fill-rule="evenodd"
+              d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
+          </svg></a>
+      </div>
     </div>
 
     <p class="footer-attribution">

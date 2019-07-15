@@ -24,13 +24,13 @@
     align-items: center
 
     +e(item)
-        margin-bottom: 1.8rem
+        margin: 0 1rem 1.8rem
         text-transform: uppercase
-        color: $grayish-blue
+        color: $white
         letter-spacing: .1ch
 
         &:hover
-            color: $white
+            color: $soft-red
 
 .footer-icons
     margin-bottom: 1.5rem
@@ -38,11 +38,46 @@
     +e(item)
         margin:0 1rem
 
+    +e(icon)
+        fill: $white
+        &:hover
+            fill: $soft-red
+
 .footer-attribution
     font-size: 12px
+    
     +e(link)
         color: $grayish-blue
         text-decoration: underline $grayish-blue
 
         &:hover
             color: $white
+
+
+//media queries
++respond-to(tablet)
+    .footer
+        padding: 2rem 2rem 0.5rem
+
+    .footer-content
+        display: flex
+        justify-content: space-between
+        width: 100%
+
+    .footer-links
+        flex-direction: row
+        justify-content: space-between
+        +e(item)
+            margin-bottom: 0.5rem
+
+
+    .footer-logo, .footer-icons
+        margin-bottom: 0.5rem
+
++respond-to(desktop-large)
+    .footer-content
+        width: 90%
+
++respond-to(ultra-large)
+    .footer-content
+        width: 80%

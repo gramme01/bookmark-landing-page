@@ -8,8 +8,6 @@
     transition: $slow
 
     +m(scrolled)
-        background: $white
-        box-shadow: 0 3px 5px rgba(0,0,0,0.05)
         padding: 16px 32px
 
     +e(logo)
@@ -40,7 +38,7 @@
         flex-direction: column
         justify-content: space-between
 
-                
+
     +e(bar)
         height: 4px
         width: 20px
@@ -62,13 +60,17 @@
     z-index: 999
     transition: $slow
 
+    +m(scrolled)
+        background: $white
+        box-shadow: 0 3px 5px rgba(0,0,0,0.05)
+        // padding: 16px 32px
+
     +m(overlay)
         height: 100vh
         background: transparentize($dark-blue, .1)
     
     +e(links)
         display: none
-
 
         +m(active)
             display: flex
@@ -78,29 +80,29 @@
             padding: 0 32px 16px
 
 .navlinks
-        text-transform: uppercase
-        list-style-type: none
-        text-align: center
+    text-transform: uppercase
+    list-style-type: none
+    text-align: center
 
-        +e(item)
-            width: 100% 
-            padding: 12px 0
-            border-top: 1px solid transparentize($grayish-blue, .3)
-    
-        +e(link)
-            font-size: 20px
-            letter-spacing: 4px
-            border: 2px solid transparent
-            width: 100%
-            display: block
-            padding: 4px 0
-            color: $white
-            line-height: 2
-            transition: $slow
+    +e(item)
+        width: 100% 
+        padding: 12px 0
+        border-top: 1px solid transparentize($grayish-blue, .3)
 
-            +m(active)
-                border: 2px solid $white
-                border-radius: 8px
+    +e(link)
+        font-size: 20px
+        letter-spacing: .4ch
+        border: 2px solid transparent
+        width: 100%
+        display: block
+        padding: 4px 0
+        color: $white
+        line-height: 2
+        transition: $slow
+
+        +m(active)
+            border: 2px solid $white
+            border-radius: 8px
 
 .social-links
     display: flex
@@ -109,3 +111,61 @@
 
     +e(item)
         margin: 16px 16px
+    
+
+//media queries
++respond-to(desktop)
+    .brand
+        width: auto
+        display: inline-block
+        padding: 0
+        +e(toggle)
+            display: none
+
+        +m(scrolled)
+            padding: 0
+
+    .navbar
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 2rem
+
+        +m(scrolled)
+            padding: 1rem 2rem
+
+        +e(links)
+            display: flex
+            justify-content: space-between
+
+    .navlinks
+        display: flex
+        +e(item)
+            padding: 0 .2rem
+            border-top: none
+
+        +e(link)
+            padding: 0 1rem
+            font-size: 12px
+            color: $dark-blue
+            border-width: 1px
+            line-height: 2.5
+
+            +m(active)
+                border-color: $soft-red
+                color: $soft-red
+
+            &:hover
+                color: $soft-red
+            
+    .social-links
+        display: none
+
+
++respond-to(desktop-large)
+    .navbar
+        padding: 2rem 5%
+
++respond-to(ultra-large)
+    .navbar
+        padding: 2rem 10%

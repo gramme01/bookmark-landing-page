@@ -4,7 +4,7 @@
         padding: 0 0 0 16px
     @else
         padding: 0 16px 0 0
-       
+    
 
     &__img
         @extend %img
@@ -15,6 +15,8 @@
             background-position-x: #{$side}
             background-image: url('../src/images/illustration-features-tab-#{$number}.svg')
 
+
+
         &::after
             @extend %after
             @if $side == left
@@ -22,5 +24,17 @@
             @else
                 left: 0
             background-color: $soft-blue
-            border-bottom-#{$side}-radius: 110px
-            border-top-#{$side}-radius: 110px
+            border-bottom-#{$side}-radius: 9999px
+            border-top-#{$side}-radius: 9999px
+
+    +respond-to(mobile-large)
+        &__img
+            width: 400px
+
+    +respond-to(desktop)
+        &__img
+            width: 100%
+
+    +respond-to(desktop-large)
+        &__img
+            max-width: 680px

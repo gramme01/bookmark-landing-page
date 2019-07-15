@@ -20,3 +20,31 @@
     font-family: 'Rubik', sans-serif
     font-weight: 400
     font-size: $font-size 
+
+
+//Media queries
+=respond-to($breakpoint)
+    @if $breakpoint == mobile-large
+        @media screen and (min-width: $width-mobile-large)
+            @content
+
+    @else if $breakpoint == tablet
+        @media screen and (min-width: $width-tablet)
+            @content
+
+    @else if $breakpoint == desktop
+        @media screen and (min-width: $width-desktop)
+            @content
+
+    @else if $breakpoint == desktop-large
+        @media screen and (min-width: $width-desktop-large)
+            @content
+
+    @else if $breakpoint == ultra-large
+        @media screen and (min-width: $width-ultra-large)
+            @content
+
+
+=respond-to-width($width)
+    @media screen and (min-width: $width)
+        @content

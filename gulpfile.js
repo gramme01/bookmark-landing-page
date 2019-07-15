@@ -1,6 +1,7 @@
-var gulp = require("gulp"),
+const gulp = require("gulp"),
 	autoprefixer = require("gulp-autoprefixer"),
 	sourcemaps = require("gulp-sourcemaps"),
+	// babel = require("gulp-babel"),
 	browsersync = require("browser-sync").create(),
 	concat = require("gulp-concat");
 
@@ -14,12 +15,19 @@ function css() {
 }
 
 function js() {
-	return gulp
-		.src("src/js/*.js")
-		.pipe(sourcemaps.init({ loadMaps: true }))
-		.pipe(concat("all.js"))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest("dist"));
+	return (
+		gulp
+			.src("src/js/*.js")
+			.pipe(sourcemaps.init({ loadMaps: true }))
+			// .pipe(
+			// 	babel({
+			// 		presets: ["es2015"]
+			// 	})
+			// )
+			.pipe(concat("all.js"))
+			.pipe(sourcemaps.write())
+			.pipe(gulp.dest("dist"))
+	);
 }
 
 function watch() {
