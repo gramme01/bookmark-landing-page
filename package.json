@@ -4,10 +4,11 @@
 	"description": "![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)",
 	"main": "gulpfile.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"deploy": "gh-pages -d bookmark"
 	},
 	"author": "",
 	"license": "ISC",
+	"homepage": "https://gramme01.github.io/bookmark-landing-page",
 	"devDependencies": {
 		"babel-core": "^6.26.3",
 		"babel-polyfill": "^6.26.0",
@@ -19,5 +20,8 @@
 		"gulp-babel": "^8.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-sourcemaps": "^2.6.5"
+	},
+	"dependencies": {
+		"gh-pages": "^2.0.1"
 	}
 }
