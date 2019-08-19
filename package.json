@@ -10,10 +10,6 @@
 	"license": "ISC",
 	"homepage": "https://gramme01.github.io/bookmark-landing-page",
 	"devDependencies": {
-		"babel-core": "^6.26.3",
-		"babel-polyfill": "^6.26.0",
-		"babel-preset-env": "^1.7.0",
-		"babelify": "^10.0.0",
 		"browser-sync": "^2.26.7",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^6.1.0",
